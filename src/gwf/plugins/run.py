@@ -24,8 +24,9 @@ def clean_logs(working_dir, graph):
     for log_name in log_files.difference(target_set):
         logger.debug("Target %s does not exist, deleting", log_name)
         with suppress(OSError):
-            os.remove(os.path.join(working_dir, ".gwf", "logs", log_name + ".stdout"))
-            os.remove(os.path.join(working_dir, ".gwf", "logs", log_name + ".stderr"))
+            pass
+            #os.remove(os.path.join(working_dir, ".gwf", "logs", log_name + ".stdout"))
+            #os.remove(os.path.join(working_dir, ".gwf", "logs", log_name + ".stderr"))
 
 
 @click.command()
